@@ -1,0 +1,136 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+<div class="container-fluid">
+
+
+
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="ms-4 mt-3  pe-md-3 d-flex align-items-center">
+
+                    <div class="me-md">
+                        <h6>Data Pencapian Mahasantri </h6>
+
+                    </div>
+                   
+
+                </div>
+                <form method="get">
+
+                    <div class="row  text-sm ms-4   w-20 ">
+                        <a class=" btn bg-gradient-primary  mb-0" href="{% url 'tbketsantri' %}"><i
+                            class="fa fa-user-plus"></i>&nbsp;&nbsp;tambah pencapaian </a>
+
+
+
+                    </div>
+                </form>
+
+
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center justify-content-center mb-0">
+                            <thead>
+                                <tr>
+                                    <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">no
+                                        </th> -->
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        Nama</td>
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        marhalah</td>
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        angkatan</td>
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        takhossus</td>
+            
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7  ps-2">
+                                        tanggal masuk</td>
+            
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        keterangan</td>
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                         lulus tanggal</td>
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        naik takhossus</td>
+                                   
+                                    <td class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 ps-2">
+                                        aksi</td>
+            
+                                </tr>
+                            </thead>
+                            <tbody>
+            
+            
+                                {% for datanubzah in ket %}
+                                <tr>
+            
+                                    <td>
+                                        <div class="d-flex px-2">
+            
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 text-sm"> {{ datanubzah.nama }}</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+            
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.marhalah }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.angkatan }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.takhossus }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.tanggal_masuk }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.keterangan }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.lulus_tanggal }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ datanubzah.naik_takhossus }}</span>
+                                    </td>
+            
+                                    <!-- <th class="text-sm font-weight-bold ms-2 mb-0">
+                                            {{ datanubzah.predikat }}</th>
+                                        <th></th> -->
+            
+                                    <td class="align-items-center me-sm-0 ps-0">
+            
+            
+                                        <a class="btn btn-link text-danger text-gradient px-3 mb-0"
+                                            href="{% url 'delete_santri' datanubzah.id %}"><i class="far fa-trash-alt me-0 "
+                                                aria-hidden="true"> </i></a>
+            
+                                        <a class="btn btn-link text-dark px-3 mb-0"
+                                            href="{% url 'update_ketsantri' datanubzah.id %}"><i
+                                                class="fas fa-pencil-alt text-dark me-1" aria-hidden="true"></i></a>
+            
+                                    </td>
+                                </tr>
+            
+            
+            
+                                </tr>{% endfor %}
+            
+            
+                            </tbody>
+            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

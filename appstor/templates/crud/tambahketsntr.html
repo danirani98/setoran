@@ -1,0 +1,62 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<div class="container-fluid">
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="ms-4 mt-3  pe-md-3 d-flex align-items-center">
+                    <div class="me-md-2 w-25">
+                        <h6 style="border: 3px;">Tambah Pencapian</h6>
+
+                    </div>
+
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+
+
+
+                        <div class="container">
+                            <form action="" method="POST">
+                      
+
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                            
+                                <br>
+
+
+
+
+                                <div class=" position-relative row   ms-1 mt-0 me-md-3">
+
+
+                                    <button class="btn btn-primary w-70" value="Save" type="submit">Simpan</button>
+                                </div>
+                            </form>
+                            <div class="row row-cols-2 mb-3 ms-9 row-cols-lg-2 mt-3">
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+{% endblock content %}

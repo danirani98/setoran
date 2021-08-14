@@ -1,0 +1,74 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<form method="POST" action="" enctype="multipart/form-data">
+<div class="container-fluid">
+  <div class="page-header min-height-200 border-radius-xl mt-4"
+  >
+    <img src="{% static 'img/curved-images/curved0.jpg'%}" alt="kal"  class="height=300 border-radius-lg shadow">
+    <span class="mask bg-gradient-primary opacity-6"></span>
+  </div>
+  <div class="card card-body blur shadow-blur mx-4 mt-n6">
+    <div class="row gx-4">
+      <div class="col-auto">
+        <div class="avatar avatar-xl position-relative">
+        
+            <img class="profile-pic" src="{{request.user.asatidz.profile_pic.url}}" alt="..."
+              class="w-100 border-radius-lg shadow-sm">
+            <a href="javascript:;"
+              class="btn btn-sm btn-icon-only bg-gradient-light position-absolute bottom-0 end-0 mb-n2 me-n2">
+              <i class="fa fa-pen top-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Image"></i>
+            </a>
+        </div>
+      </div>
+      <div class="col-auto my-auto">
+        <div class="h-100">
+          <h5 class="mb-1">
+            
+            Ust. {{ request.user|capfirst}}
+          </h5>
+          <p class="mb-0 font-weight-bold text-sm">
+            pengajar ma'had aly nurul jadid
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
+<!-- <style>
+  .profile-pic{
+   max-width : 200px;
+   max-height :200px;
+   margin: 0 auto;
+   border-radius : 50%;
+  }
+  </style> -->
+  
+
+<div class="container-fluid">
+  
+
+  {% csrf_token %}
+
+  {{ formcustumer|crispy }}
+  <!-- {{ formcustumer.as_p }} -->
+
+  <div>  <img class="profile-pic" src="{{request.user.asatidz.profile_pic.url}}"></div>
+
+</div>
+  <div class=" position-relative row mt-3   ms-1 mt-0 me-md-3">
+
+
+    <button class="btn btn-primary w-70" value="Save" type="submit">Simpan</button>
+  </div>
+  
+</form>
+
+
+{% endblock content %}

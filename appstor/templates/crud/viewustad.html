@@ -1,0 +1,123 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+<div class="container-fluid">
+
+
+
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="ms-4 mt-3  pe-md-3 d-flex align-items-center">
+
+                    <div class="me-md- w-25">
+                        <h6>Data Setor Mahasantri </h6>
+
+                    </div>
+                    <form method="get">
+
+                        <div class="row  text-sm  w-600 ">
+                            <div class="col input-group " style="width: 100;" aria-placeholder="cari nama">
+                                <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"
+                                        aria-placeholder="nama"></i></span>
+                                {{ filter_data_ustad.form.takhossus | add_class:"form-control form-control-sm"}}
+                            </div>
+
+
+
+                        </div>
+                    </form>
+
+                </div>
+
+
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center justify-content-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama
+                                    </th>
+
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        halaman</td>
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        lafadz</td>
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        predikat</td>
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        tanggal</td>
+
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        takhossus</td>
+                                    <!-- <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 ps-2">
+                                        aksi</td> -->
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+                                {% for dataqrb in datasetorsantria %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-3">
+
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 text-sm"> {{ dataqrb.nama }}</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex px-0">
+
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 text-sm"> {{ dataqrb.hal }}</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ dataqrb.lafadz }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ dataqrb.predikat }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ dataqrb.tanggal }}</span>
+                                    </td>
+                                    <td> <span class="text-xs font-weight-bold"> {{ dataqrb.takhossus }}</span></td>
+                                    <!--                      
+                                    <td class="align-items-center">
+                                        <div class="ms-sm-0">
+                                            <a class="btn btn-link text-dark text-gradient px-0 mb-0"
+                                                href=" "><i class="fa fa-view text-xxs me-0"
+                                                    aria-hidden="true">Tambah</i></a>
+                                        </div>
+                                    </td> -->
+
+                                </tr>
+
+
+
+                                </tr>{% endfor %}
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

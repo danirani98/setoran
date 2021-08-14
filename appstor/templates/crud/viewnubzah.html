@@ -1,0 +1,114 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid">
+
+
+
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="ms-4 mt-3  pe-md-3 d-flex align-items-center">
+            
+                    <div class="me-md- w-25">
+                        <h6>Setoran Kitab Nubzah </h6>
+
+                    </div>
+                    <!-- <div class="input-group  ms-5 w-60">
+
+                        <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" placeholder="Type here...">
+                        
+                    </div> -->
+                  
+                </div>
+                     
+               
+                <div class="card-body px-2 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center justify-content-center mb-0">
+                            <thead>
+                                <tr>
+                                    <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama
+                                        </th> -->
+                                   
+                                        <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        halaman</td> 
+                                        <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        lafadz</td>
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        predikat</td>
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        tanggal</td>
+                            
+                                        <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                                        takhossus</td>
+                                    <td
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 ps-2">
+                                        aksi</td>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+                                {% for dataqrb in datasetorsantria %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-3">
+
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 text-sm"> {{ dataqrb.hal }}</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ dataqrb.lafadz }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ dataqrb.predikat }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-xs font-weight-bold"> {{ dataqrb.tanggal }}</span>
+                                    </td>
+                                    <td> <span class="text-xs font-weight-bold"> {{ dataqrb.takhossus }}</span></td>
+                     
+                                    <td class="align-items-center">
+                                        <div class="ms-sm-0">
+                                            <a class="btn btn-link text-dark text-gradient px-0 mb-0"
+                                                href=" {% url 'setornubzah' dataqrb.id  %}"><i class="fa fa-view text-xxs me-0"
+                                                    aria-hidden="true">Tambah</i></a>
+                                                    <a class="btn btn-link text-dark text-gradient px-0 mb-0"
+                                                    href=" {% url 'delete_setor' dataqrb.id  %}"><i
+                                                        class="fa fa-view text-xxs me-0" aria-hidden="true">hapus</i></a>
+                                                        <a class="btn btn-link text-dark text-gradient px-0 mb-0"
+                                                        href=" {% url 'edit_setor2' dataqrb.id  %}"><i
+                                                            class="fa fa-view text-xxs me-0" aria-hidden="true">edit</i></a>
+                                        </div>
+                                    </td>
+                              
+                                </tr>
+
+
+
+                                </tr>{% endfor %}
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

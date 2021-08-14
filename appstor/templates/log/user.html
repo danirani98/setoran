@@ -1,0 +1,397 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load static %}
+<div class="row">
+
+  <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-8">
+            <div class="numbers">
+              <p class="text-sm mb-0 text-capitalize font-weight-bold">Mahasantri MA NJ</p>
+              <h5 class="font-weight-bolder mb-0">
+
+                {{ sn }} /
+                <span class="text-success text-sm font-weight-bolder">{{ l }} Lk /</span>
+                <span class="text-success text-sm font-weight-bolder">{{ p }} Pr</span>
+              </h5>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+              <i class=" text-lg opacity-10" aria-hidden="true">All</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-8">
+            <div class="numbers">
+              <p class="text-sm mb-0 text-capitalize font-weight-bold">Tamhidiyah</p>
+              <h5 class="font-weight-bolder mb-0">
+                {{ tm }} /
+                <span class="text-success text-sm font-weight-bolder">{{ t }} Lk /</span>
+                <span class="text-success text-sm font-weight-bolder">{{ tp }} Pr</span>
+              </h5>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+              <i class="text-lg opacity-10" aria-hidden="true">Tm</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-8">
+            <div class="numbers">
+              <p class="text-sm mb-0 text-capitalize font-weight-bold">I'dadiyah</p>
+              <h5 class="font-weight-bolder mb-0">
+                {{ id }} /
+                <span class="text-success text-sm font-weight-bolder">{{ idl }} Lk /</span>
+                <span class="text-success text-sm font-weight-bolder">{{ idp }} Pr</span>
+              </h5>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+              <i class=" text-lg opacity-10" aria-hidden="true">Id</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-8">
+            <div class="numbers">
+              <p class="text-sm mb-0 text-capitalize font-weight-bold">Ma'had Aly</p>
+              <h5 class="font-weight-bolder mb-0">
+                {{ ma }} /
+                <span class="text-success text-sm font-weight-bolder">{{ mal }} Lk /</span>
+                <span class="text-success text-sm font-weight-bolder">{{ map }} Pr</span>
+              </h5>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+              <i class=" text-lg opacity-10" aria-hidden="true">MA</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row mt-4">
+  <div class="col-lg-7 mb-lg-0 mb-4">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="d-flex flex-column h-100">
+              <p class="mb-1 pt-2 text-bold">Built by developers</p>
+              <h5 class="font-weight-bolder">App Stor</h5>
+              <p class="mb-1">merupakan aplikasi setoran yang berguna bagi para tenaga pengajar Ma'had Aly Nurul Jadid
+                demi memonitoring setoran mahasantri.   
+              </p>
+              <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+                Read More
+                <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+            <div class="bg-gradient-success border-radius-lg h-100">
+              <img src="{% static 'img/shapes/waves-white.svg'%}"
+                class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+              <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                <img class="w-50 position-relative z-index-2 pt-4"
+                  src="{% static 'img/logo mahad aly.png'%}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="card h-100 p-3">
+      <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
+        style="background-image: url('../staticimg/ivancik.jpg');">
+        <span class="mask bg-gradient-dark"></span>
+        <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+          <h5 class="text-white font-weight-bolder mb-4 pt-2">Ma'had Aly Nurul Jadid</h5>
+          <p class="text-white">Ma'had Aly Merupakan lembaga yang mengkaji kitab kuning yang berada di bawah PP.Nurul Jadid Paiton Probolinggo, Terdapat
+            program Tamhidiyah, I'dadiyah, dan Ma'had Aly.</p>
+          <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+            Read More
+            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-4">
+
+
+  <!-- Hirstori asatidz  -->
+  <div class="col-12 col-xl-4">
+    <div class="card h-100">
+      <div class="card-header pb-0 p-3">
+        <h6 class="mb-0">Histori Setoran Tamhidiyah</h6>
+      </div>
+      <div class="card-body p-3">
+        <ul class="list-group">
+          {% for datanubzah in halaman_order_custumer.object_list %}
+          <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+            <div class="avatar me-3">
+
+              <img src="{% static 'img/logo mahad aly.png'%}" alt="kal" class="border-radius-lg shadow">
+            </div>
+            <div class="d-flex align-items-start flex-column justify-content-center">
+              <h6 class="mb-0 text-sm">{{datanubzah.nama}}</h6>
+              <p class="mb-0 text-xs">{{datanubzah.marhalah}}.</p>
+            </div>
+            <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="{% url 'setorasatidz' datanubzah.id %}">lihat</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+
+      </div>
+      <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm  justify-content-center">
+          <li class="page-item {% if not previous %} disabled {% endif %}">
+            <a class="page-link" href="{{ previous }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% for n in halaman_order_custumer.paginator.page_range %}
+          {% if halaman_order_custumer.number == n %}
+          <li class="page-item active" aria>
+            <span class="page-link">
+              {{ n }}
+              <span class="sr-only"></span>
+            </span>
+          </li>
+          {% elif n > halaman_order_custumer.number|add:-3 and n < halaman_order_custumer.number|add:3 %} <li
+            class="page-item"><a class="pagelink" href="?halaman={{ n }}">{{ n }}</a></li>
+            {% endif %}
+            {% endfor %}
+            <li class="page-item {% if not next %} disabled {% endif %}">
+              <a class="page-link" href="{{ next }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+  <div class="col-12 col-xl-4">
+    <div class="card h-100">
+      <div class="card-header pb-0 p-3">
+        <h6 class="mb-0">Histori Setoran I'dadiyah</h6>
+      </div>
+      <div class="card-body p-3">
+        <ul class="list-group">
+          {% for datanubzah in halaman_order_custumer2.object_list %}
+          <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+            <div class="avatar me-3">
+
+              <img src="{% static 'img/logo mahad aly.png'%}" alt="kal" class="border-radius-lg shadow">
+            </div>
+            <div class="d-flex align-items-start flex-column justify-content-center">
+              <h6 class="mb-0 text-sm">{{datanubzah.nama}}</h6>
+              <p class="mb-0 text-xs">{{datanubzah.marhalah}}.</p>
+            </div>
+            <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="{% url 'setorasatidz' datanubzah.id %}">lihat</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm  justify-content-center">
+          <li class="page-item {% if not previous %} disabled {% endif %}">
+            <a class="page-link" href="{{ previous }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% for n in halaman_order_custumer.paginator.page_range %}
+          {% if halaman_order_custumer.number == n %}
+          <li class="page-item active" aria>
+            <span class="page-link">
+              {{ n }}
+              <span class="sr-only"></span>
+            </span>
+          </li>
+          {% elif n > halaman_order_custumer.number|add:-3 and n < halaman_order_custumer.number|add:3 %} <li
+            class="page-item"><a class="pagelink" href="?halaman={{ n }}">{{ n }}</a></li>
+            {% endif %}
+            {% endfor %}
+            <li class="page-item {% if not next %} disabled {% endif %}">
+              <a class="page-link" href="{{ next }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="col-12 col-xl-4">
+    <div class="card h-100">
+      <div class="card-header pb-0 p-3">
+        <h6 class="mb-0">Histori Setoran Ma'had Aly</h6>
+      </div>
+      <div class="card-body p-3">
+        <ul class="list-group">
+          {% for datanubzah in halaman_order_custumer3.object_list %}
+          <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+            <div class="avatar me-3">
+
+              <img src="{% static 'img/logo mahad aly.png'%}" alt="kal" class="border-radius-lg shadow">
+            </div>
+            <div class="d-flex align-items-start flex-column justify-content-center">
+              <h6 class="mb-0 text-sm">{{datanubzah.nama}}</h6>
+              <p class="mb-0 text-xs">{{datanubzah.marhalah}}.</p>
+            </div>
+            <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="{% url 'setorasatidz' datanubzah.id %}">lihat</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm  justify-content-center">
+          <li class="page-item {% if not previous %} disabled {% endif %}">
+            <a class="page-link" href="{{ previous }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% for n in halaman_order_custumer.paginator.page_range %}
+          {% if halaman_order_custumer.number == n %}
+          <li class="page-item active" aria>
+            <span class="page-link">
+              {{ n }}
+              <span class="sr-only"></span>
+            </span>
+          </li>
+          {% elif n > halaman_order_custumer.number|add:-3 and n < halaman_order_custumer.number|add:3 %} <li
+            class="page-item"><a class="pagelink" href="?halaman={{ n }}">{{ n }}</a></li>
+            {% endif %}
+            {% endfor %}
+            <li class="page-item {% if not next %} disabled {% endif %}">
+              <a class="page-link" href="{{ next }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+<div class="col-xl-30">
+  <div class="col-lg-25 mt-4 mb-lg-0 mb-4">
+
+    <div class="row my-4">
+      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+        <div class="card">
+          <div class="card-header pb-0">
+            <div class="row">
+              <div class="col-lg-6 col-7">
+                <h6>Histori Setoran </h6>
+                <h6>Nama  : Ust.  {{ request.user|capfirst}}</h6>
+
+              </div>
+          
+            </div>
+          </div>
+          <div class="card-body px-4 pb-3">
+            <div class="table-responsive">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr class="ms-sm-0">
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama
+                      </th>
+
+                      <td
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                          halaman</td>
+                      <td
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                          lafadz</td>
+                      <td
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                          predikat</td>
+                      <td
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                          tanggal</td>
+
+                      <td
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 me-sm-1 ps-2">
+                          takhossus</td>
+                      <!-- <td
+                          class="text-uppercase text-secondary text-xxs font-weight-bolder  opacity-7 ps-2">
+                          aksi</td> -->
+
+                  </tr>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  {% for tampil_order_custumer in data_order_custumer %}
+                  <tr>
+                    <td class="4">
+                      <span class="text-xs font-weight-bold">{{ tampil_order_custumer.nama }} </span></td>
+                    <td>
+                      <span class="text-xs font-weight-bold">{{ tampil_order_custumer.hal }}</span></td>
+                    <td>
+                      <span class="text-xs font-weight-bold">{{ tampil_order_custumer.lafadz }} </span></td>
+                    <td>
+                      <span class="text-xs font-weight-bold"> {{ tampil_order_custumer.takhossus }} </span></td>
+                      <td>
+                        <span class="text-xs font-weight-bold"> {{ tampil_order_custumer.tanggal }} </span></td>
+                      
+                      <td>
+                     
+                      <span class="text-xs font-weight-bold">{{ tampil_order_custumer.predikat }}</span> </td>
+
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+</div>
+  {% endblock content %}
